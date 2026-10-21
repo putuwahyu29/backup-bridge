@@ -1,0 +1,73 @@
+{
+    "name": "putuwahyu29/backup-bridge",
+    "description": "A secure bridge, visual control dashboard, and multi-database backup agent for Laravel applications.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/putuwahyu29/backup-bridge",
+    "support": {
+        "issues": "https://github.com/putuwahyu29/backup-bridge/issues",
+        "source": "https://github.com/putuwahyu29/backup-bridge"
+    },
+    "authors": [
+        {
+            "name": "Putu Wahyu",
+            "homepage": "https://github.com/putuwahyu29"
+        }
+    ],
+    "keywords": [
+        "laravel",
+        "backup",
+        "database-backup",
+        "qnap",
+        "webdav",
+        "nas",
+        "bridge",
+        "postgresql",
+        "mysql",
+        "sqlite",
+        "dashboard"
+    ],
+    "require": {
+        "php": "^8.2 || ^8.3 || ^8.4",
+        "illuminate/support": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/http": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/routing": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/console": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/filesystem": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "illuminate/view": "^10.0 || ^11.0 || ^12.0 || ^13.0",
+        "symfony/process": "^6.0 || ^7.0 || ^8.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^8.0 || ^9.0 || ^10.0",
+        "phpunit/phpunit": "^10.0 || ^11.0"
+    },
+    "suggest": {
+        "spatie/laravel-backup": "Allows using the Spatie backup driver for advanced backup workflows (^8.0|^9.0|^10.0)"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bps\\AppBackup\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bps\\AppBackup\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bps\\AppBackup\\AppBackupServiceProvider"
+            ],
+            "aliases": {
+                "BackupBridge": "Bps\\AppBackup\\Facades\\BackupBridge"
+            }
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

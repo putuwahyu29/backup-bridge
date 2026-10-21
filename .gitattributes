@@ -1,0 +1,9 @@
+* text=auto eol=lf
+
+/tests export-ignore
+/.github export-ignore
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/CONTRIBUTING.md export-ignore
+/CHANGELOG.md export-ignore
+/README.id.md export-ignore
